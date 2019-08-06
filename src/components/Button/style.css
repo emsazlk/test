@@ -1,0 +1,83 @@
+.button {
+  height     : 6rem;
+  max-height : 100%;
+  width      : 100%;
+  font-size  : 1.2rem;
+  font-weight: 700;
+  line-height: 6rem;
+  color      : var(--main-color-blue);
+  background : transparent;
+  display    : table;
+  text-align : center;
+  fill       : var(--main-color-blue);
+}
+
+.button>* {
+  display       : table-cell;
+  vertical-align: middle;
+  text-align    : center;
+  margin        : auto;
+
+}
+
+.button.style-cancel {
+  color: var(--main-color-red);
+  fill : var(--main-color-red);
+}
+
+.button.style-back {
+  color: var(--main-color-gray);
+  fill : var(--main-color-gray);
+}
+
+.button.style-white {
+  background-color: var(--main-color-white);
+  color           : var(--main-color-blue);
+  fill            : var(--main-color-blue);
+}
+
+@media (min-width: 768px) {
+  .button:hover {
+    background-color: var(--main-color-white);
+    color           : var(--main-color-blue);
+    box-shadow      : 0 1rem 5rem rgba(0, 0, 0, 0.05);
+  }
+
+  .button.style-white:hover {
+    background-image: none;
+    background-color: var(--main-color-light-blue);
+    color           : var(--main-color-white);
+    box-shadow      : none;
+  }
+
+  .button.style-cancel:hover {
+    color: var(--main-color-red);
+  }
+
+  .button.style-back:hover {
+    color: var(--main-color-gray);
+  }
+}
+
+@media (max-width: 768px) {
+  .button:active {
+    background-color: var(--main-color-white);
+    color           : var(--main-color-blue);
+    box-shadow      : 0 1rem 5rem rgba(0, 0, 0, 0.05);
+  }
+
+  .button.style-white:active {
+    background-image: none;
+    background-color: var(--main-color-light-blue);
+    color           : var(--main-color-white);
+    box-shadow      : none;
+  }
+
+  .button.style-cancel:active {
+    color: var(--main-color-red);
+  }
+
+  .button.style-back:active {
+    color: var(--main-color-gray);
+  }
+}

@@ -1,0 +1,70 @@
+.input {
+  margin-top   : 1rem;
+  margin-bottom: 1rem;
+  position     : relative;
+  max-height   : 6rem;
+  width        : 100%;
+  display      : flex;
+  align-items  : center;
+  color        : var(--main-color-black);
+  font-size    : 1.2rem;
+  font-weight  : 600;
+  line-height  : 1.8rem;
+  border-bottom: 1px solid var(--main-color-gray-opacity);
+  fill         : var(--main-color-gray);
+}
+
+.input.is-white-style {
+  border-bottom: 1px solid var(--main-color-white-opacity);
+  fill         : var(--main-color-white);
+}
+
+.input input {
+  height          : 6rem;
+  padding         : 2rem 0;
+  width           : 100%;
+  border          : none;
+  background-color: transparent;
+}
+
+.input.is-white-style input {
+  color: var(--main-color-white);
+}
+
+.input .error-text {
+  position      : absolute;
+  bottom        : 0;
+  left          : 0;
+  right         : 2rem;
+  text-align    : right;
+  font-weight   : 600;
+  color         : var(--main-color-red);
+  font-size     : 1.2rem;
+  pointer-events: none;
+}
+
+.input.is-disabled {
+  background-color: var(--main-color-gray-opacity);
+}
+
+.input .icon-container {
+  position: absolute;
+  top     : 0;
+  bottom  : 0;
+  right   : 2rem;
+}
+
+
+input::-webkit-input-placeholder,
+input::-moz-placeholder,
+input:-ms-input-placeholder,
+input:-moz-placeholder {
+  color: #000;
+}
+
+.input.is-white-style input::-webkit-input-placeholder,
+.input.is-white-style input::-moz-placeholder,
+.input.is-white-style input:-ms-input-placeholder,
+.input.is-white-style input:-moz-placeholder {
+  color: #fff;
+}

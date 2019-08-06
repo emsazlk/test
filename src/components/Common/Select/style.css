@@ -1,0 +1,119 @@
+.select {
+  margin-top   : 1rem;
+  margin-bottom: 1rem;
+  position     : relative;
+  max-height   : 6rem;
+  display      : flex;
+  align-items  : center;
+  color        : var(--main-color-black);
+  font-size    : 1.2rem;
+  font-weight  : 600;
+  line-height  : 1.8rem;
+  cursor       : pointer;
+}
+
+
+.select .select__indicators>* {
+  display: none;
+}
+
+.select .select__indicators {
+  position       : absolute;
+  right          : 2rem;
+  top            : 0;
+  bottom         : 0;
+  margin         : auto;
+  width          : 2rem;
+  height         : 2rem;
+  display        : flex;
+  align-items    : center;
+  justify-content: center;
+  transition     : all 0.3s ease-out;
+}
+
+.select .select__indicators:before {
+  content   : "";
+  width     : 0.5rem;
+  height    : 0.5rem;
+  display   : block;
+  border    : 0.5rem solid transparent;
+  border-top: 0.5rem solid var(--main-color-gray);
+}
+
+.select.is-open .select__indicators {
+  transform: rotate(180deg);
+}
+
+.select .select__menu {
+  animation       : fade--in .3s ease-in-out;
+  top             : 100%;
+  background-color: hsl(0, 0%, 100%);
+  border-radius   : 0.4rem;
+  box-shadow      : 0 0 0 1px hsla(0, 0%, 0%, 0.1), 0 0.4rem 11px hsla(0, 0%, 0%, 0.1);
+  position        : absolute;
+  width           : 100%;
+  z-index         : 1;
+  box-sizing      : border-box;
+}
+
+.select .select__menu-list {
+  padding: 0
+}
+
+.select .select__option {
+  overflow  : hidden;
+  min-height: 3.6rem;
+}
+
+.select .select__option.select__option--is-focused {
+  background-color: transparent;
+  color           : var(--main-color-black)
+}
+
+.select .select__option.select__option--is-selected {
+  background-color: var(--main-color-mega-ligth-blue);
+  color           : var(--main-color-black)
+}
+
+.select .select__option:hover {
+  background-color: var(--main-color-light-blue);
+  color           : var(--main-color-white)
+}
+
+.select .error-text {
+  position      : absolute;
+  bottom        : 0;
+  left          : 0;
+  right         : 2rem;
+  text-align    : right;
+  font-weight   : 600;
+  color         : var(--main-color-red);
+  font-size     : 1.2rem;
+  pointer-events: none;
+}
+
+
+.select .select__control--is-disabled {
+  background-color: var(--main-color-gray-opacity);
+}
+
+.select .select__single-value {
+  display    : flex;
+  align-items: center;
+  position   : absolute;
+  top        : 0;
+  left       : 0;
+  right      : 0;
+  bottom     : 0;
+}
+
+/*.select .css-1kv3hzq-Input{
+  overflow: hidden;
+  height  : 0;
+}*/
+/*
+.select input, 
+.select .select__input,
+.select .css-1kv3hzq-Input {
+  height: 100%;
+}*/

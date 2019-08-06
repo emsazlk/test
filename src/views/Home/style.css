@@ -1,0 +1,72 @@
+.page-home .home-table,
+.page-home .home-head {
+  display  : flex;
+  width    : 100%;
+  flex-wrap: wrap;
+  padding  : 2rem 0;
+}
+
+.page-home .home-table-box {
+  width          : 33.333%;
+  display        : flex;
+  height         : 3rem;
+  justify-content: center;
+  align-content  : center;
+  flex-wrap      : wrap;
+  border         : 1px solid #000;
+  transition     : all .3s ease;
+  cursor         : pointer;
+}
+
+.page-home .home-table-box:hover {
+  background-color: gray;
+}
+
+.page-home .home-head-item {
+  width           : 14.28%;
+  display         : flex;
+  height          : 3rem;
+  justify-content : center;
+  align-content   : center;
+  flex-wrap       : wrap;
+  border          : 1px solid #000;
+  transition      : all .3s ease;
+  background-color: yellow;
+  padding-right   : 3rem;
+  position        : relative
+}
+
+.page-home .home-head-item .info {
+  border-right: 1px solid #000;
+  width       : 100%;
+  height      : 100%;
+  text-align  : center;
+  line-height : 3rem;
+}
+
+.page-home .home-head-item .icon {
+  position   : absolute;
+  top        : 0;
+  bottom     : 0;
+  right      : 0;
+  width      : 3rem;
+  line-height: 3rem;
+  text-align : center;
+  cursor     : pointer;
+}
+
+.page-home .home-container-top {
+  padding: 2.5rem 0;
+}
+
+.page-home label {
+  margin-right: 2rem;
+  font-size   : 1.5rem;
+  font-weight : bold;
+}
+
+@media (max-width: 768px) {
+  .page-home .home-head-item {
+    width: 25%;
+  }
+}
